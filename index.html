@@ -37,13 +37,13 @@
                 <div class="col-12">
                     <!-- Card Question #1.
                     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-                    <div class="card">
+                    <div id="blockOne" class="card animated fadeInUp">
                         <div class="card-body">
                             <h3 class="center">¿Como Conseguiste este par de zapatos?</h3>
                             <p class="center">
-                                <button class="btn-3d btn-3d-primary">Me los dieron en mi empresa.</button>
-                                <button class="btn-3d btn-3d-success">Me los regalo un amigo</button>
-                                <button class="btn-3d btn-3d-warning">Los compre</button>
+                                <button response="Me los dieron en mi empresa" name="question1" class="btn-3d btn-3d-primary">Me los dieron en mi empresa</button>
+                                <button response="Me los regalo un amigo" name="question1" class="btn-3d btn-3d-success">Me los regalo un amigo</button>
+                                <button response="Los compre" name="question1" class="btn-3d btn-3d-warning">Los compre</button>
                             </p>
                         </div>
                     </div>
@@ -52,24 +52,23 @@
                     <br>
                     <!-- Card Stars
                     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-                    <div class="card">
+                    <div id="blockTwo" class="card" style="display:none">
                         <div class="card-body">
                             <h3 class="center">Califica tu par de zapatos:</h3>
-                            <p class="center">
-                                <button class="star-btn text-dark"><i class="far fa-star fa-x7" style=""></i></button>
-                                <button class="star-btn text-dark"><i class="far fa-star fa-x7" style=""></i></button>
-                                <button class="star-btn text-dark"><i class="far fa-star fa-x7" style=""></i></button>
-                                <button class="star-btn text-dark"><i class="far fa-star fa-x7" style=""></i></button>
-                                <button class="star-btn text-dark"><i class="far fa-star fa-x7" style=""></i></button>
+                            <p id="starsRowOne" class="center">
+                                <button name="question2" class="star-btn text-dark"><i response="1" class="fas fa-star fa-x7" style=""></i></button>
+                                <button name="question2" class="star-btn text-dark"><i response="2" class="fas fa-star fa-x7" style=""></i></button>
+                                <button name="question2" class="star-btn text-dark"><i response="3" class="fas fa-star fa-x7" style=""></i></button>
+                                <button name="question2" class="star-btn text-dark"><i response="4" class="fas fa-star fa-x7" style=""></i></button>
+                                <button name="question2" class="star-btn text-dark"><i response="5" class="fas fa-star fa-x7" style=""></i></button>
                             </p>
-                            <p class="center">
-                                <button class="star-btn text-warning"><i class="fas fa-star fa-x7"></i></button>
-                                <button class="star-btn text-warning"><i class="fas fa-star fa-x7"></i></button>
-                                <button class="star-btn text-warning"><i class="fas fa-star fa-x7"></i></button>
-                                <button class="star-btn text-warning"><i class="fas fa-star fa-x7"></i></button>
-                                <button class="star-btn text-warning"><i class="fas fa-star fa-x7"></i></button>
+                            <p id="starsRowTwo" class="center" style="display:none">
+                                <button id="0" class="star-btn text-dark"><i name="0" class="fas fa-star fa-x7"></i></button>
+                                <button id="1" class="star-btn text-dark"><i name="1" class="fas fa-star fa-x7"></i></button>
+                                <button id="2" class="star-btn text-dark"><i name="2" class="fas fa-star fa-x7"></i></button>
+                                <button id="3" class="star-btn text-dark"><i name="3" class="fas fa-star fa-x7"></i></button>
+                                <button id="4" class="star-btn text-dark"><i name="4" class="fas fa-star fa-x7"></i></button>
                             </p>
-                            <p class="center"><button class="btn-3d btn-3d-warning">Siguiente</button></p>
                         </div>
                     </div>
 
@@ -77,10 +76,12 @@
                     <br>
                     <!-- Form
                     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-                    <div class="card">
+                    <div id="blockThree" class="card" style="display:none">
                         <div class="card-body">
                             <h3 class="center">Por favor, ingresa tus datos:</h3>
                             <form action="">
+                                <input type="text" name="how" id="how" style="display:none">
+                                <input type="text" name="stars" id="stars" style="display:none">
                                 <label for="nombre">Escribe Tu Nombre: </label>
                                 <input type="text" name="nombre" id="nombre">
                                 <label for="trabajo">Empresa en la que Trabajas: </label>
@@ -104,5 +105,6 @@
             &copy; Grupo Cobán | Caminando desde 1914
         </p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
