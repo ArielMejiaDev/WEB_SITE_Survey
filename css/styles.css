@@ -440,13 +440,7 @@ header img#logo {
     padding: 10px;
     top: 15%;
 }
-/*End Responsive*/
-
-/*Custom*/
-
-  
-  /* Main*/
-  main {
+main {
     margin-top: 80px; /* Same height as header */
   }
   /* Stars*/
@@ -463,4 +457,4 @@ header img#logo {
         width: 100%;
     }
 }
-/*End Custom*/
+/*End Responsive*/
