@@ -1,4 +1,3 @@
-alert('coso');
 var questionOne = document.getElementsByName("question1");
 how = document.getElementById('how');
 blockOne = document.getElementById('blockOne');
@@ -6,7 +5,7 @@ blockTwo = document.getElementById('blockTwo');
 questionTwo = document.getElementsByName("question2");
 starsRowOne = document.getElementById('starsRowOne');
 starsRowTwo = document.getElementById('starsRowTwo');
-starsToFill = document.getElementsByClassName('fas fa-star fa-x7');
+starsToFill = document.getElementsByClassName('star-btn text-dark star-empty');
 for (let index = 0; index < questionOne.length; index++) {
     questionOne[index].addEventListener("click", stepOne);
 }
@@ -40,16 +39,18 @@ function stepTwo(s)
 function replaceStars(s){
     starsRowOne.style.display = "none";
     starsRowTwo.style.display = "block";
+    alert(s);
     fillStars(s);
+
 }
 function fillStars(s){
+    var btns = [];
+    //console.log(starsToFill);
     for (let index = 0; index < s; index++) {
-        var btn = document.getElementById(index).addEventListener('click', fill);
-        
+        btns.push(starsToFill[index]);
     }
-    alert(s);
-}
-function fill(e)
-{
-    e.target.setAttribute('class', 'text-warning');
+    for (let index = 0; index < btns.length; index++) {
+        btns[index].removeAttribute('class');
+        btns[index].setAttribute('class', 'star-btn text-warning star-fill');
+    }
 }
