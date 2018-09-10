@@ -21,6 +21,9 @@
     <!-- AnimateCSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="css/animate.css">
+    <!-- RatingStars
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/ratingStars.css">
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <!-- <link rel="shortcut icon" type="image/png" href="images/favicon.jpg"/> -->
@@ -55,40 +58,30 @@
                     <div id="blockTwo" class="card" style="display:none">
                         <div class="card-body">
                             <h3 class="center">Califica tu par de zapatos:</h3>
-                            <p id="starsRowOne" class="center">
-                                <button name="question2" class="star-btn text-dark"><i response="1" class="fas fa-star fa-x7" style=""></i></button>
-                                <button name="question2" class="star-btn text-dark"><i response="2" class="fas fa-star fa-x7" style=""></i></button>
-                                <button name="question2" class="star-btn text-dark"><i response="3" class="fas fa-star fa-x7" style=""></i></button>
-                                <button name="question2" class="star-btn text-dark"><i response="4" class="fas fa-star fa-x7" style=""></i></button>
-                                <button name="question2" class="star-btn text-dark"><i response="5" class="fas fa-star fa-x7" style=""></i></button>
-                            </p>
-                            <p id="starsRowTwo" class="center" style="display:none">
-                                <button id="0" class="star-btn text-dark star-empty"><i name="0" class="fas fa-star fa-x7"></i></button>
-                                <button id="1" class="star-btn text-dark star-empty"><i name="1" class="fas fa-star fa-x7"></i></button>
-                                <button id="2" class="star-btn text-dark star-empty"><i name="2" class="fas fa-star fa-x7"></i></button>
-                                <button id="3" class="star-btn text-dark star-empty"><i name="3" class="fas fa-star fa-x7"></i></button>
-                                <button id="4" class="star-btn text-dark star-empty"><i name="4" class="fas fa-star fa-x7"></i></button>
-                            </p>
+                            <div class="rating rating2"><!--
+                            --><a href="5" class="star">★</a><!--
+                            --><a href="4" class="star">★</a><!--
+                            --><a href="3" class="star">★</a><!--
+                            --><a href="2" class="star">★</a><!--
+                            --><a href="1" class="star">★</a>
+                        </div>
                         </div>
                     </div>
-
-                    <br>
-                    <br>
                     <!-- Form
                     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
                     <div id="blockThree" class="card" style="display:none">
                         <div class="card-body">
                             <h3 class="center">Por favor, ingresa tus datos:</h3>
-                            <form action="">
+                            <form action="" onsubmit="sendData()" id="form">
                                 <input type="text" name="how" id="how" style="display:none">
                                 <input type="text" name="stars" id="stars" style="display:none">
                                 <label for="nombre">Escribe Tu Nombre: </label>
-                                <input type="text" name="nombre" id="nombre">
+                                <input type="text" name="userName" id="userName" required>
                                 <label for="trabajo">Empresa en la que Trabajas: </label>
-                                <input type="text" name="trabajo" id="trabajo">
+                                <input type="text" name="work" id="work" required>
                                 <label for="edad">Edad: </label>
-                                <input type="number" name="edad" id="edad">
-                                <button type="submit" class="btn-3d btn-3d-primary">Enviar</button>
+                                <input type="number" name="age" id="age" required>
+                                <button type="submit" class="btn-3d btn-3d-primary" id="formButton">Enviar</button>
                             </form>
                             <br>
                         </div>
