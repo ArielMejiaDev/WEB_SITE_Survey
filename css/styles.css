@@ -2,10 +2,17 @@
 * {
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
   }
+  /*To set sticky footer*/
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  /*To set sticky footer*/
   body {
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
+    margin-bottom: 80px; /* To set footer sticky */
   }
   .clear {
     clear: both; /* Clear floats */
@@ -76,11 +83,16 @@ header {
   }
   /*Footer*/
 footer {
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 0;
-    padding: 20px 0 20px 0;
+    padding: 10px 0 10px 0;
     background-color: #2C201D;
     color: white;
+    /* Styles to set the footer sticky */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* End sticky footer */
 }
 footer p {
     font-size: 0.9em;
