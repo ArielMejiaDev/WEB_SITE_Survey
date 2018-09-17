@@ -15,6 +15,32 @@ shoe = document.getElementById('shoe');
 country = document.getElementById('country');
 formButton = document.getElementById('formButton');
 //End Elements
+
+//Background variables
+var timeInSeconds = 6;
+var time = timeInSeconds*1000;
+var fotos = [
+    'https://images.unsplash.com/photo-1536936343740-68cb2a95f935?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9531340b80f0715f6978b1e732020e09&auto=format&fit=crop&w=1350&q=80',
+    'https://images.unsplash.com/photo-1536956570953-8124479796df?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1295c1125fd6aeb7569d41e2afb79e07&auto=format&fit=crop&w=750&q=80',
+    'https://images.unsplash.com/photo-1536936319023-3d99613837e5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5da2c676bc7885c4636b0c7b671355fd&auto=format&fit=crop&w=750&q=80'
+];
+
+var counter = 0;
+var countUp = setInterval(function(){
+    console.log(counter);
+    console.log("set background"+fotos[counter]);
+    document.body.style.backgroundImage = "url("+fotos[counter]+")";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundSize = "cover";
+    counter++
+    if (counter === fotos.length) {
+    //clearInterval(countUp);
+    counter =0;
+    }
+}, 5000);
+//Function to change background
+
 //Event - click button first question
 //-----------------------------------------------------------
 for (let index = 0; index < questionOne.length; index++) {
