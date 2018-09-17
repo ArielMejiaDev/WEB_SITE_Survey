@@ -81,17 +81,7 @@ position: absolute;
 @media screen and (max-width: 600px) {
   .rating a,
   .rating label {
-    float:right;
-    color: #aaa;
-    text-decoration: none;
-    -webkit-transition: color .4s;
-    -moz-transition: color .4s;
-    -o-transition: color .4s;
-    transition: color .4s;
     font-size: 75px;
-  }
-  .rating2 {
-    direction: rtl;
   }
   .rating2 a {
     float:none
@@ -102,20 +92,8 @@ position: absolute;
 @media screen and (max-width: 410px) {
   .rating a,
   .rating label {
-    float:right;
-    color: #aaa;
-    text-decoration: none;
-    -webkit-transition: color .4s;
-    -moz-transition: color .4s;
-    -o-transition: color .4s;
-    transition: color .4s;
+    
     font-size: 40px;
-  }
-  .rating2 {
-    direction: rtl;
-  }
-  .rating2 a {
-    float:none
   }
   
 }
