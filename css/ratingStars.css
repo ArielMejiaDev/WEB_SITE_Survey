@@ -77,7 +77,7 @@ position: absolute;
 .rating2 a {
   float:none
 }
-/*small devices*/
+/*resize smaller devices*/
 @media screen and (max-width: 600px) {
   .rating a,
   .rating label {
@@ -88,7 +88,7 @@ position: absolute;
   }
   
 }
-
+/*resize to smallest devices*/
 @media screen and (max-width: 410px) {
   .rating a,
   .rating label {

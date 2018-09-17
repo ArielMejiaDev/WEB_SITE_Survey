@@ -11,6 +11,8 @@ starsRow = document.getElementsByClassName('star');
 userName = document.getElementById('userName');
 work = document.getElementById('work');
 age = document.getElementById('age');
+shoe = document.getElementById('shoe');
+country = document.getElementById('country');
 formButton = document.getElementById('formButton');
 //End Elements
 //Event - click button first question
@@ -93,5 +95,15 @@ function showData(){
     console.log(userName);
     console.log(work);
     console.log(age);
-    alert("Como obtuvo los zapatos: "+how.value+"\nClasificacion del zapato: "+stars.value+"\nNombre: "+userName.value+"\nTrabaja en: "+work.value+"\nDe edad: "+age.value);
+    console.log(shoe);
+    console.log(country);
+    alert("Como obtuvo los zapatos: "
+    +how.value+"\nClasificacion del zapato: "
+    +stars.value+"\nNombre: "
+    +userName.value+"\nTrabaja en: "
+    +work.value+"\nDe edad: "
+    +age.value+"\nZapato: "
+    +shoe.value+"\nPais: "
+    +country.value
+    );
 }
