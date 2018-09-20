@@ -14,6 +14,8 @@ age = document.getElementById('age');
 shoe = document.getElementById('shoe');
 country = document.getElementById('country');
 formButton = document.getElementById('formButton');
+form = document.getElementById('form');
+showCode = document.getElementById('showCode');
 //End Elements
 
 //Event - click button first question
@@ -80,31 +82,39 @@ function showStepThree(){
 }
 //Validate the form
 //-----------------------------------------------------------
-function sendData(){
-    if (userName.value!="" && work.value !="" && age.value!="") {
-        return true;
-    }
-}
+// function sendData(){
+//     if (userName.value!="" && work.value !="" && age.value!="") {
+        
+//         return true;
+        
+//     }
+// }
 //Third Event submit
 //-----------------------------------------------------------
-form.addEventListener('submit', showData);
+form.addEventListener('submit', hiddeStepThree);
+function hiddeStepThree(e){
+    e.preventDefault();
+    blockThree.style.display='none';
+    showCode.style.display='inline-block';
+    show.setAttribute('class', 'card animated slideInDown');
+}
 //Show data
 //-----------------------------------------------------------
-function showData(){
-    console.log(how);
-    console.log(stars);
-    console.log(userName);
-    console.log(work);
-    console.log(age);
-    console.log(shoe);
-    console.log(country);
-    alert("Como obtuvo los zapatos: "
-    +how.value+"\nClasificacion del zapato: "
-    +stars.value+"\nNombre: "
-    +userName.value+"\nTrabaja en: "
-    +work.value+"\nDe edad: "
-    +age.value+"\nZapato: "
-    +shoe.value+"\nPais: "
-    +country.value
-    );
-}
+// function showData(){
+//     console.log(how);
+//     console.log(stars);
+//     console.log(userName);
+//     console.log(work);
+//     console.log(age);
+//     console.log(shoe);
+//     console.log(country);
+//     alert("Como obtuvo los zapatos: "
+//     +how.value+"\nClasificacion del zapato: "
+//     +stars.value+"\nNombre: "
+//     +userName.value+"\nTrabaja en: "
+//     +work.value+"\nDe edad: "
+//     +age.value+"\nZapato: "
+//     +shoe.value+"\nPais: "
+//     +country.value
+//     );
+// }

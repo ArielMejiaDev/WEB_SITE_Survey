@@ -72,7 +72,7 @@
                     <div id="blockThree" class="card" style="display:none">
                         <div class="card-body">
                             <h3 class="center">Por favor, ingresa tus datos:</h3>
-                            <form action="" onsubmit="sendData()" id="form">
+                            <form action="" id="form">
                                 <input type="text" name="how" id="how" style="display:none">
                                 <input type="text" name="stars" id="stars" style="display:none">
                                 <label for="nombre">Escribe Tu Nombre: </label>
@@ -85,9 +85,19 @@
                                 <input type="text" name="shoe" id="shoe" required>
                                 <label for="country">Pais: </label>
                                 <input type="text" name="country" id="country" required>
+                                <input type="hidden" name="code" id="code">
                                 <button type="submit" class="btn-3d btn-3d-primary" id="formButton">Enviar</button>
-                            </form>
                             <br>
+                            <br>
+                        </div>
+                    </div>
+
+
+                    <div class="card animated slideInUp" id="showCode" style="display:none">
+                        <div class="card-body">
+                            <h3>Gracias tu codigo de descuento es: </h3>
+                            <h1 id="resp"></h1>
+                        </form>
                         </div>
                     </div>
 
@@ -102,7 +112,8 @@
             &copy; Grupo Cobán | Caminando desde 1914
         </p>
     </footer>
-    <script src="js/script.js"></script>
     <script src="js/background.script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/code.script.js"></script>
 </body>
 </html>
